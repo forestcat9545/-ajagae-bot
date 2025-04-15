@@ -47,7 +47,8 @@ if not candidates:
     print("⚠️ 전송할 수 있는 새로운 개그가 없습니다.")
     exit()
 
-gag = random.choice(candidates)
+hashtags = "#아재개그 #개그봇 #트윗봇"
+gag = f"{random.choice(candidates)}\n\n{hashtags}"
 
 try:
     response = client.create_tweet(text=gag)
